@@ -1,0 +1,205 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FPS Game Analysis</title>
+    <link rel="stylesheet" href="CSS/StyleSheet.css">
+</head>
+<body>
+
+    <!-- NAV BAR -->
+    <nav class="navbar">
+
+        <div class="nav-left">
+            <button class="nav-btn active" onclick="navigate('home', this)">Home</button>
+            <button class="nav-btn" onclick="navigate('genre', this)">Game Genre</button>
+            <button class="nav-btn" onclick="navigate('about', this)">About</button>
+        </div>
+
+    <div class="nav-right">
+        <button class="mode-btn" onclick="toggleMode()">Light / Dark</button>
+    </div>
+
+    </nav>
+
+    <!-- HOME -->
+    <section id="home" class="page">
+        <h1>FPS Game Design Comparison</h1>
+        <p>
+            This website analyses First-Person Shooter games, focusing on
+            Rainbow Six Siege and Call of Duty.
+        </p>
+    </section>
+
+    <!-- Game Genre -->
+    <section id="genre" class="page hidden">
+        <h2>Game Genre</h2>
+
+        <h3 id="genre-title"></h3>
+
+        <!-- GAME GENRE SELECT -->
+
+        <div class="genre-container">
+
+            <div class="genre-card" onclick="showGenre('fps')">
+                <h3>FPS</h3>
+                <p>First person shooter ranging from fast to slow and heavily using game sense to prove you skill in these games.</p>
+            </div>
+
+            <div class="genre-card" onclick="showGenre('rpg')">
+                <h3>RPG</h3>
+                <p>A role playing story games with wide and vast world for players to explore and loot.</p>
+            </div>
+
+            <div class="genre-card" onclick="showGenre('sandbox')">
+                <h3>Sandbox</h3>
+                <p>A creative type of genre allowing players to fully use the games limits to build, explore and do whatever they basically want.</p>
+            </div>
+
+            <div class="genre-card" onclick="showGenre('gacha')">
+                <h3>Gacha</h3>
+                <p>A wide open game with many genres but its most noticable one being Gacha having its own unique anime type style and having a character collection with random reward system.</p>
+            </div>
+        </div>
+
+
+
+        <div id="fps-games" class="hidden button-box">
+            <button onclick="showGame('siege')">Rainbow Six Siege</button>
+            <button onclick="showGame('cod')">Call of Duty</button>
+            <button onclick="showGame('csgo')">CSGO</button>
+        </div>
+
+        <!-- RPG GAMES -->
+        <div id="rpg-games" class="hidden button-box">
+            <button onclick="showGame('dark-souls')">Dark Souls</button>
+            <button onclick="showGame('thewitcher')">The Witcher 3</button>
+        </div>
+
+        <!-- SANDBOX GAMES -->
+        <div id="sandbox-games" class="hidden button-box">
+            <button onclick="showGame('minecraft')">Minecraft</button>
+            <button onclick="showGame('nomanssky')">No mans Sky</button>
+        </div>
+
+        <!-- GACHA GAMES -->
+        <div id="gacha-games" class="hidden button-box">
+            <button onclick="showGame('zenless')">Zenless Zone Zero</button>
+            <button onclick="showGame('genshin')">Genshin Impact</button>
+        </div>
+
+        <!-- MAIN DISPLAY BOX -->
+        <div id="game-display" class="game-display hidden">
+
+            <h3 id="game-title"></h3>
+
+            <img id="game-image" class="game-image" alt="">
+
+            <p id="game-description"></p>
+
+        </div>
+
+        <!-- GAMES DISPLAY BUTTON BOX -->
+        <div id="info-box" class="button-box hidden">
+
+            <!-- SIEGE EXTRA BUTTONS-->
+            <div id="Siege-Buttons" class="hidden">
+                <button onclick="showSiegeSection('Gameplay')">Gameplay Focus</button>
+                <button onclick="showSiegeSection('Tactical')">Tactical Depth</button>
+                <button onclick="showSiegeSection('Difference')">Why Siege is different and unique</button>
+                <button onclick="showSiegeSection('Other media')">Other media</button>
+
+                <p id="siege-extra-text"></p>
+            </div>
+
+
+            <!-- COD EXTRA BUTTONS -->
+            <div id="cod-Buttons" class="hidden">
+                <button onclick="showCodSection( 'Overview')">Overview</button>
+                <button onclick="showCodSection( 'Key-Titles')">Key Titles</button>
+                <button onclick="showCodSection( 'Core-Design')">Core Design</button>
+                <button onclick="showCodSection( 'Other media')">Other media</button>
+
+                <p id="cod-extra-text"></p>
+            </div>
+
+            <!-- CSGO EXTRA BUTTONS -->
+            <div id="csgo-Buttons" class="hidden">
+                <button onclick="showCsgoSection('Gameplay')">Gameplay Focus</button>
+                <button onclick="showCsgoSection('Economy')">Economy System</button>
+                <button onclick="showCsgoSection('Competitive')">Competitive Design</button>
+                <button onclick="showCsgoSection('Other media')">Other media</button>
+
+                <p id="csgo-extra-text"></p>
+            </div>
+
+            <!-- DARK SOULS EXTRA BUTTONS -->
+            <div id="darksouls-Buttons" class="hidden">
+                <button onclick="showDarksoulsSection('Gameplay')">Gameplay</button>
+                <button onclick="showDarksoulsSection('Exploration')">Exploration</button>
+                <button onclick="showDarksoulsSection('Other media')">Other media</button>
+
+                <p id="darksouls-extra-text"></p>
+            </div>
+
+            <!-- THE WITCHER EXTRA BUTTONS -->
+            <div id="thewitcher-Buttons" class="hidden">
+                <button onclick="showThewitcherSection('Story')"></button>
+                <button onclick="showThewitcherSection('THE World')"></button>
+                <button onclick="showThewitcherSection('Other media')"></button>
+
+                <p id="thewitcher-extra-text"></p>
+            </div>
+
+            <!-- MINECRAFT EXTRA BUTTONS `-->
+            <div id="minecraft-Buttons" class="hidden">
+                <button onclick="showMinecraftSection('Gameplay')">Gameplay</button>
+                <button onclick="showMinecraftSection('Creativity')">Creativity</button>
+                <button onclick="showMinecraftSection('Other media')">Other media</button>
+
+                <p id="minecraft-extra-text"></p>
+            </div>
+
+            <!-- NO MANS SKY EXTRA BUTTONS -->
+            <div id="nomanssky-Buttons" class="hidden">
+                <button onclick="showNomansskySection('Entire World')">Entire World</button>
+                <button onclick="showNomansskySection('Gameplay')">Gameplay</button>
+                <button onclick="showNomansskySection('Other media')">Other media</button>
+
+                <p id="nomanssky-extra-text"></p>
+            </div>
+
+            <!-- ZZZ EXTRA BUTTONS -->
+            <div id="zzz-Buttons" class="hidden">
+                <button onclick="showZzzSection('System')">Gacha system</button>
+                <button onclick="showZzzSection('Progression')">Progression</button>
+                <button onclick="showZzzSection('Other media')">Other stuff</button>
+
+                <p id="zzz-extra-text"></p>
+            </div>
+
+            <!-- GENSHIN IMPACT EXTRA BUTTONS -->
+            <div id="genshin-Buttons" class="hidden">
+                <buttons onclick="showGenshinSection('Gameplay')">Gameplay</buttons>
+                <buttons onclick="showGenshinSection('World')">Open World</buttons>
+                <buttons onclick="showGenshinSection('Gacha')">Gacha System</buttons>
+                <buttons onclick="showGenshinSection('Other media')">Other media</buttons>
+
+                <p id="genshin-extra-text"></p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="page hidden">
+        <h2>About This Project</h2>
+        <p>
+            Developed for COMP1004 Computing Practice using HTML, CSS, and JavaScript.
+        </p>
+    </section>
+
+    <script src="JS/Script.js"></script>
+</body>
+</html>
