@@ -147,7 +147,7 @@ function showGame(game) {
 
     if (game === "dark-souls") {
         title.textContent = "Dark souls";
-        image.src = "Images/darksouls.jpg";
+        image.src = "https://www.greenmangaming.com/blog/wp-content/uploads/2022/03/dark-souls-3-all-bosses-areas-side-quests-in-order.jpg";
         image.alt = "Dark Souls gameplay";
 
         desc.textContent =
@@ -167,7 +167,7 @@ function showGame(game) {
 
     if (game === "thewitcher") {
         title.textContent = "The Witcher 3";
-        image.src = "Images/thewitcher3.jpg";
+        image.src = "https://www.thewitcher.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2F1.4c59601c.jpg&w=3840&q=75";
         image.alt = "The Witcher gameplay";
 
         desc.textContent = 
@@ -184,11 +184,12 @@ function showGame(game) {
         minecraftButtons.classList.add("hidden");
         nomansskyButtons.classList.add("hidden");
         zzzButtons.classList.add("hidden");
+        gachaButtons.classList.add("hidden");
     }
 
     if (game === "minecraft") {
         title.textContent = "Minecraft";
-        image.src = "Images/minecraft.jpg";
+        image.src = "https://img.redbull.com/images/c_crop,w_2640,h_1320,x_190,y_0/c_auto,w_1200,h_630/f_auto,q_auto/redbullcom/2025/8/11/dcusojkfgapu4zxe3gtb/minecraft-landscape";
         image.alt = "Minecraft gameplay";
 
         desc.textContent = 
@@ -210,7 +211,7 @@ function showGame(game) {
 
     if (game === "nomanssky") {
         title.textContent = " No Mans Sky";
-        image.src = "Images/nomanssky.jpg";
+        image.src = "https://miro.medium.com/1*uZ9neAOy9dnSHN58yVcs9w.jpeg";
         image.alt = "No Mans Sky gameplay";
 
         desc.textContent = "No Mans Sky is a massive game with a lot of planets with in total of 18 Quintillion with all of them being unique, and " +
@@ -232,7 +233,7 @@ function showGame(game) {
 
     if (game === "zenless") {
         title.textContent = "Zenless Zone Zero";
-        image.src = "Images/zenless.jpg";
+        image.src = "https://assetsio.gnwcdn.com/ZZZ-review-header.jpg?width=1600&height=900&fit=crop&quality=100&format=png&enable=upscale&auto=webp";
         image.alt = "Zenless Zone Zero gameplay";
 
         desc.textContent = 
@@ -254,7 +255,7 @@ function showGame(game) {
 
     if (game === "genshin") {
         title.textContent = "Genshin Impact";
-        image.src = "Images/Genshin Impact.jpg";
+        image.src = "https://images.cgames.de/images/gsgp/290/genshin-impact_6070826.jpg";
         image.alt = "Genshin Impact gameplay";
 
         desc.textContent = 
@@ -410,7 +411,8 @@ function showDarksoulsSection(section) {
     if (section === "Exploration") {
         text.textContent = 
         "Exploration in Dark Souls is amazing, with each title having different areas for players to explore and discover with loot, beauty and lore. With many of these area are interconnected " +
-        "leading to places you have been before or you have never discovered as this can either be rewarding or a challenge or a boss.";
+        "leading to places you have been before or you have never discovered as this can either be rewarding or a challenge or a boss. With each playthrough you can find and expect different things " +
+        "making the game have more playability to it instead of it just being tough which is the nice uniqueness of the Dark souls trilogy.";
     }
 
     if (section === "Other media") {
@@ -433,7 +435,7 @@ function showThewitcherSection(section) {
         "the land, peoplez, Geralt and Ciri";
     }
     
-    if (section === "World") {
+    if (section === "THE World") {
         text.textContent = "The open world in The Witcher 3 is very vast and gritty with the world mostly known as the Continent with it being heavilly inspired by Slavic folklore and the war-torn land scapes, " +
         "with each area deep with lore, from dark, mature themes in it. With open world, many games have environmental and world building story telling from characters and The Witcher 3 does that from atmosphere and " +
         "characters and just overall design of how the world is like";
