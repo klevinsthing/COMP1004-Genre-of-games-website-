@@ -23,7 +23,7 @@ function toggleMode() {
 
 // SHOW GENRE //
 function showGenre(genre) {
-        document.querySelectorAll('[id$= "-games"]').forEach(section => {
+        document.querySelectorAll('[id$="-games"]').forEach(section => {
             section.classList.add("hidden");
         });
 
@@ -39,21 +39,24 @@ function showGenre(genre) {
 
 // GAME SWITCHING
 function showGame(game) {
+    document.querySelectorAll('#info-box > div').forEach(div => {
+    div.classList.add("hidden");
+});
     const title = document.getElementById("game-title");
     const image = document.getElementById("game-image");
     const desc = document.getElementById("game-description");
     const display = document.getElementById("game-display");
     const infoBox = document.getElementById("info-box");
 
-    const codButtons = document.getElementById("cod-Buttons");
+    const CodButtons = document.getElementById("Cod-Buttons");
     const SiegeButtons = document.getElementById("Siege-Buttons");
-    const csgoButtons = document.getElementById("csgo-Buttons");
-    const darksoulsButtons = document.getElementById("darksouls-Buttons");
-    const thewitcherButtons = document.getElementById("thewitcher-Buttons");
-    const minecraftButtons = document.getElementById("minecraft-Buttons");
-    const nomansskyButtons = document.getElementById("nomanssky-Buttons");
-    const zzzButtons = document.getElementById("zzz-Buttons");
-    const genshinButtons = document.getElementById("genshin-Buttons");
+    const CsgoButtons = document.getElementById("Csgo-Buttons");
+    const DarksoulsButtons = document.getElementById("Darksouls-Buttons");
+    const ThewitcherButtons = document.getElementById("Thewitcher-Buttons");
+    const MinecraftButtons = document.getElementById("Minecraft-Buttons");
+    const NomansskyButtons = document.getElementById("Nomanssky-Buttons");
+    const ZenlessButtons = document.getElementById("Zenless-Buttons");
+    const GenshinButtons = document.getElementById("Genshin-Buttons");
 
     const siegeText = document.getElementById("siege-extra-text");
     const codText = document.getElementById("cod-extra-text");
@@ -85,8 +88,8 @@ function showGame(game) {
         image.alt = "Rainbow Six Siege gameplay";
 
         desc.textContent =
-            "Tom Clancy’s Rainbow Six Siege, also commonly referred to as Rainbow Six or Siege, " +
-        "is a tactical first-person shooter that focuses primarily on strategy, teamwork, " +
+            "Tom Clancy’s Rainbow Six Siege, also commonly referred to as Rainbow Six or Siege, made by the developers of Ubisoft made " +
+        "a very heavy tactical first-person shooter that focuses primarily on strategy, teamwork, " +
         "and environmental control rather than fast reflex-based gameplay found in many " +
         "other FPS titles such as Counter-Strike: Global Offensive and several Call of Duty " +
         "games. However, despite this heavy emphasis on tactical decision-making, fast " +
@@ -101,6 +104,7 @@ function showGame(game) {
         minecraftButtons.classList.add("hidden");
         nomansskyButtons.classList.add("hidden");
         zzzButtons.classList.add("hidden");
+        genshinButtons.classList.add("hidden");
     }
 
     if (game === "cod") {
@@ -108,19 +112,22 @@ function showGame(game) {
         image.src = "Images/cod-modern-warfare-2-xbox-1.png";
         image.alt = "Call of Duty Modern Warfare 2";
         desc.textContent =
-            "Call of Duty is a fast-paced first-person shooter that focuses on quick reactions, smooth movement, and fast gunfights. " +
+            "Call of Duty is made by many companies within Activision like Infinity Ward, SledgeHammer Games, Treyarch which all of these " +
+            "compaines made the different CoD titles real and making a huge success off of it From Black Ops, Modern WareFare and World war series. " +
+            "In Call of duty the game is a fast-paced first-person shooter that focuses on quick reactions, smooth movement, and fast gunfights. " +
             "Unlike slower tactical shooters, Call of Duty rewards aggressive playstyles and fast decision making. " +
             "Players are encouraged to move around the map constantly, earn killstreak rewards, and improve through progression systems. " +
             "The game is designed to be accessible to new players while still being competitive at higher levels.";
 
             SiegeButtons.classList.add("hidden");
-        codButtons.classList.remove("hidden");
-        csgoButtons.classList.add("hidden");
-        darksoulsButtons.classList.add("hidden");
-        thewitcherButtons.classList.add("hidden");
-        minecraftButtons.classList.add("hidden");
-        nomansskyButtons.classList.add("hidden");
-        zzzButtons.classList.add("hidden");
+        CodButtons.classList.remove("hidden");
+        CsgoButtons.classList.add("hidden");
+        DarksoulsButtons.classList.add("hidden");
+        ThewitcherButtons.classList.add("hidden");
+        MinecraftButtons.classList.add("hidden");
+        NomansskyButtons.classList.add("hidden");
+        ZenlessButtons.classList.add("hidden");
+        GenshinButtons.classList.add("hidden");
     }
 
     if (game === "csgo") {
@@ -129,20 +136,20 @@ function showGame(game) {
         image.alt = "CSGO gameplay";
 
         desc.textContent =
-            "Counter-Strike: Global Offensive also known now by the community and everyone as CS2. CS is a first-person shooter " +
-            "that focuses on map knowledge, gun-control and precision gunplay and teamwork. CS is different to other fps titles with " +
-            "it mainly being a 5 vs 5 players must manage an in game economy to buy weapon and equipmment each round and since there are " +
-            "no respawn during the round  every utility used, gun brought will matter. But if there are players at the end of the round " +
-            " when it end the next round they will keep every weapon and utility they have picked up to the next round.";
-
+            "Counter-Strike: Global Offensive made by Valve as the game is also known now by the community as CS2 the new installment. As CS is a first-person tactical shooter " +
+            "focusing on aim, gun control knowledge, map knowledge, use of gear like throwables, teamwork and strategy. As CS is a old game, " +
+            "but it is unique in the way that players at the start of every round they have in game money this allows them to buy new weapons, " +
+            "throwables, and armour but this can only be done by gaining kills and winning a round. No respawns in any round so communication is key in CS.";
+            
         SiegeButtons.classList.add("hidden");
-        codButtons.classList.add("hidden");
-        csgoButtons.classList.remove("hidden");
-        darksoulsButtons.classList.add("hidden");
-        thewitcherButtons.classList.add("hidden");
-        minecraftButtons.classList.add("hidden");
-        nomansskyButtons.classList.add("hidden");
-        zzzButtons.classList.add("hidden");
+        CodButtons.classList.add("hidden");
+        CsgoButtons.classList.remove("hidden");
+        DarksoulsButtons.classList.add("hidden");
+        ThewitcherButtons.classList.add("hidden");
+        MinecraftButtons.classList.add("hidden");
+        NomansskyButtons.classList.add("hidden");
+        ZenlessButtons.classList.add("hidden");
+        GenshinButtons.classList.add("hidden");
     }
 
     if (game === "dark-souls") {
@@ -151,18 +158,19 @@ function showGame(game) {
         image.alt = "Dark Souls gameplay";
 
         desc.textContent =
-            "Dark Souls is a challenging action RPG known for iits punishing difficulty, amazing lore, a rewarding combat system. " +
-            "The game focuses on player skill, patience, and learning enemy attack patterns. With that Dark Souls encourages the " +
-            "player on careful exploration, strategic combat and the persistence through the failure.";
-
+            "Dark Souls made by FromSoftware is a game that is extremely challenging action RPG known for it's insane amount of punishment from the difficulty, also containing " +
+            "amazing lore, and rewarding combat feel. With the game obviously focusing on you the player in being patience and learning " +
+            "the enemies attacks this goes for exploring too not just the combat.";
+            
         SiegeButtons.classList.add("hidden");
-        codButtons.classList.add("hidden");
-        csgoButtons.classList.add("hidden");
-        darksoulsButtons.classList.remove("hidden");
-        thewitcherButtons.classList.add("hidden");
-        minecraftButtons.classList.add("hidden");
-        nomansskyButtons.classList.add("hidden");
-        zzzButtons.classList.add("hidden");
+        CodButtons.classList.add("hidden");
+        CsgoButtons.classList.add("hidden");
+        DarksoulsButtons.classList.remove("hidden");
+        ThewitcherButtons.classList.add("hidden");
+        MinecraftButtons.classList.add("hidden");
+        NomansskyButtons.classList.add("hidden");
+        ZenlessButtons.classList.add("hidden");
+        GenshinButtons.classList.add("hidden");
     }
 
     if (game === "thewitcher") {
@@ -171,20 +179,20 @@ function showGame(game) {
         image.alt = "The Witcher gameplay";
 
         desc.textContent = 
-        "The Witcher 3 is a story driven RPG game, focusing on the players actions and choices with in the game, also having its open world map " +
+        "The Witcher 3 is a story driven RPG game made by CD Project Red, focusing on the players actions and choices with in the game, also having its open world map " +
         "for exploration, and its own character development. Unlike Dark souls focusing on its mass difficulty and combat as well as its heavy exploration. " +
         "While The Witcher 3 focuses much more on a character sided story instead of just focusing on a world building one, with focuses such as, choices " +
         "and character development as well as quests, characters and endings making players focus on so many other things than just a single objective.";
 
         SiegeButtons.classList.add("hidden");
-        codButtons.classList.add("hidden");
-        csgoButtons.classList.add("hidden");
-        darksoulsButtons.classList.add("hidden");
-        thewitcherButtons.classList.remove("hidden");
-        minecraftButtons.classList.add("hidden");
-        nomansskyButtons.classList.add("hidden");
-        zzzButtons.classList.add("hidden");
-        gachaButtons.classList.add("hidden");
+        CodButtons.classList.add("hidden");
+        CsgoButtons.classList.add("hidden");
+        DarksoulsButtons.classList.add("hidden");
+        ThewitcherButtons.classList.remove("hidden");
+        MinecraftButtons.classList.add("hidden");
+        NomansskyButtons.classList.add("hidden");
+        ZenlessButtons.classList.add("hidden");
+        GenshinButtons.classList.add("hidden");
     }
 
     if (game === "minecraft") {
@@ -193,20 +201,19 @@ function showGame(game) {
         image.alt = "Minecraft gameplay";
 
         desc.textContent = 
-        "Mincecraft is a sandbox game basically endless possiblity from exploring, building and surviving in a block based game where you " +
-        "the player has all freedom to do whatever you want in your world from destroying it to playing with friends and having fun building " +
-        "Minecraft is a game where you build your own world with the only limitation is time and imagination and that is what makes minecraft " +
-        "amazing and loved by many.";
+        "Minecraft is a Sandbox made by Mojang as the game allows players to have endless possibilities in exploring, combat, building, and surviving in a block-based " +
+        "game where you the player has all the freedom to change how their world looks all from their imagination and you can play with friends too " +
+        "if they want to join, or you can play solo too. Minecraft is loved by all ages in its simple design and gameplay but endless ways to change the game";
 
         SiegeButtons.classList.add("hidden");
-        codButtons.classList.add("hidden");
-        csgoButtons.classList.add("hidden");
-        darksoulsButtons.classList.add("hidden");
-        thewitcherButtons.classList.add("hidden");
-        minecraftButtons.classList.remove("hidden");
-        nomansskyButtons.classList.add("hidden");
-        zzzButtons.classList.add("hidden");
-        genshinButtons.classList.add("hidden");
+        CodButtons.classList.add("hidden");
+        CsgoButtons.classList.add("hidden");
+        DarksoulsButtons.classList.add("hidden");
+        ThewitcherButtons.classList.add("hidden");
+        MinecraftButtons.classList.remove("hidden");
+        NomansskyButtons.classList.add("hidden");
+        ZenlessButtons.classList.add("hidden");
+        GenshinButtons.classList.add("hidden");
     }
 
     if (game === "nomanssky") {
@@ -214,21 +221,21 @@ function showGame(game) {
         image.src = "https://miro.medium.com/1*uZ9neAOy9dnSHN58yVcs9w.jpeg";
         image.alt = "No Mans Sky gameplay";
 
-        desc.textContent = "No Mans Sky is a massive game with a lot of planets with in total of 18 Quintillion with all of them being unique, and " +
+        desc.textContent = "No Mans Sky is a massive Sandbox game made by Hello Games as the game contains a lot of planets with in total of 18 Quintillion with all of them being unique, and " +
         "procedurally generated planets and with these planets are spread across the 255 Galaxies with each star system containing 2 to 6 planets" + 
         "You can own planets (somehow), and name them discover the life forms on those planets and being able to unload them onto a databse for all " +
         "players and community to look at. The game is still being updated today so more improvements building, ships and expeditions are going to be " +
         "added into the game";
 
         SiegeButtons.classList.add("hidden");
-        codButtons.classList.add("hidden");
-        csgoButtons.classList.add("hidden");
-        darksoulsButtons.classList.add("hidden");
-        thewitcherButtons.classList.add("hidden");
-        minecraftButtons.classList.add("hidden");
-        nomansskyButtons.classList.remove("hidden");
-        zzzButtons.classList.add("hidden");
-        genshinButtons.classList.add("hidden");
+        CodButtons.classList.add("hidden");
+        CsgoButtons.classList.add("hidden");
+        DarksoulsButtons.classList.add("hidden");
+        ThewitcherButtons.classList.add("hidden");
+        MinecraftButtons.classList.add("hidden");
+        NomansskyButtons.classList.remove("hidden");
+        ZenlessButtons.classList.add("hidden");
+        GenshinButtons.classList.add("hidden");
     }
 
     if (game === "zenless") {
@@ -237,20 +244,19 @@ function showGame(game) {
         image.alt = "Zenless Zone Zero gameplay";
 
         desc.textContent = 
-            "Zenless Zone zero also known as ZZZ is a gacha game made by Hoyoverse, a company which is very used to the gacha games development " +
-            "as they have created many other games before Zenless. Zenless zone zero is unqiue than the other hoyogames and other gacha games as " +
-            "ZZZ has its very own unqiues style from animation to the characters  personality and their design, and then the world design are all " +
-            "unique to ZZZ, you'll be able notice its much more unique urban design than other gacha games.";
+            "Zenless Zone Zero also known short as ZZZ is a gacha game made by Hoyoverse, as it stands out for its unqiueness in the level, character, " +
+            "story and extreme animated characters with it being a Unique urban landscape. Within the game it focuses heavily on team-building, stylish " +
+            "gameplay, and a very distint visual identity, to other gacha titles.";
 
         SiegeButtons.classList.add("hidden");
-        codButtons.classList.add("hidden");
-        csgoButtons.classList.add("hidden");
-        darksoulsButtons.classList.add("hidden");
-        thewitcherButtons.classList.add("hidden");
-        minecraftButtons.classList.add("hidden");
-        nomansskyButtons.classList.add("hidden");
-        zzzButtons.classList.remove("hidden");
-        genshinButtons.classList.add("hidden");
+        CodButtons.classList.add("hidden");
+        CsgoButtons.classList.add("hidden");
+        DarksoulsButtons.classList.add("hidden");
+        ThewitcherButtons.classList.add("hidden");
+        MinecraftButtons.classList.add("hidden");
+        NomansskyButtons.classList.add("hidden");
+        ZenlessButtons.classList.remove("hidden");
+        GenshinButtons.classList.add("hidden");
     }
 
     if (game === "genshin") {
@@ -259,21 +265,21 @@ function showGame(game) {
         image.alt = "Genshin Impact gameplay";
 
         desc.textContent = 
-            " Genshin Impact on of Hoyo first gacha games and it completly different due to it being open world action with the anime type style as " +
+            "Genshin Impact also made by Hoyoverse with it being the first gacha games and it completly different due to it being open world action with the anime type style as " +
             "they have done with their future titles. With the visuals being the various elements that are for each character with all of them having " +
             "unqiue animation to their attacks. From other parts which is the open world as players can explore the vast world of Teyvat, from doing side " +
             "or main quests killing enemies for loot to improve your characters stats to then fight even stronger enemies and of course allowing players " +
             "to roll to see if they can get the character they want or weapon for that character.";
 
             SiegeButtons.classList.add("hidden");
-            codButtons.classList.add("hidden");
-            csgoButtons.classList.add("hidden");
-            darksoulsButtons.classList.add("hidden");
-            thewitcherButtons.classList.add("hidden");
-            minecraftButtons.classList.add("hidden");
-            nomansskyButtons.classList.add("hidden");
-            zzzButtons.classList.add("hidden");
-            genshinButtons.classList.remove("hidden");
+            CodButtons.classList.add("hidden");
+            CsgoButtons.classList.add("hidden");
+            DarksoulsButtons.classList.add("hidden");
+            ThewitcherButtons.classList.add("hidden");
+            MinecraftButtons.classList.add("hidden");
+            NomansskyButtons.classList.add("hidden");
+            ZenlessButtons.classList.add("hidden");
+            GenshinButtons.classList.remove("hidden");
     }
 }
 
